@@ -1,0 +1,32 @@
+extends layout
+
+block page-content
+  #msgpanel
+    h3#msg
+  .form-group
+    div.row
+      div.col-md-9.col-md-offset-1
+        div.row    
+          div.col-md-2
+            label(for='term') Combination
+          div.col-md-2  
+            label(for='numbers') Numbers:
+          div.col-md-2
+            input#numb1.form-control.input-lg(name='numb1', placeholder="Number 1" autofocus)
+          div.col-md-2
+            input#numb2.form-control.input-lg(name='numb2', placeholder="Number 2")
+          div.col-md-2
+            input#numb3.form-control.input-lg(name='numb3', placeholder="Number 3")
+          div.col-md-2
+            input#numb4.form-control.input-lg(name='numb4', placeholder="Number 4")
+          div.col-md-2
+            input#numb5.form-control.input-lg(name='numb5', placeholder="Number 5")
+          div.col-md-2
+            input#numb6.form-control.input-lg(name='numb6', placeholder="Number 6")
+          div.col-md-2
+            label(for='reimb') R:
+            input#reimb.form-control.input-lg(name='reimb', placeholder="Reimburse")
+        div.row    
+          div#contain-submit.col.md-3
+            input#sub-compare.btn.btn-default(type='submit', value='Send', onclick='postCombination("/compare")')
+          

@@ -1,0 +1,34 @@
+extends layout
+
+block page-content
+  #msgpanel
+    h3#msg
+  .form-group
+    div.row
+      div.col-md-9.col-md-offset-1
+        div.row    
+          div.col-md-2
+            label(for='term') Combination
+          div.col-md-2  
+            label(for='numbers') Numbers:
+          div.col-md-2
+            input#numb1.form-control.input-lg(name='numb1', placeholder="n1" autofocus)
+          div.col-md-2
+            input#numb2.form-control.input-lg(name='numb2', placeholder="n2")
+          div.col-md-2
+            input#numb3.form-control.input-lg(name='numb3', placeholder="n3")
+          div.col-md-2
+            input#numb4.form-control.input-lg(name='numb4', placeholder="n4")
+          div.col-md-2
+            input#numb5.form-control.input-lg(name='numb5', placeholder="n5")
+          div.col-md-2
+            input#numb6.form-control.input-lg(name='numb6', placeholder="n6")
+          div.col-md-2
+            label(for='comp') C:
+            input#comp.form-control.input-lg(name='comp', placeholder="Comp")
+            label(for='reimb') R:
+            input#reimb.form-control.input-lg(name='reimb', placeholder="Reimb")
+        div.row    
+          div#contain-submit.col.md-3
+            input#sub-set-master-comb.btn.btn-default(type='submit', value='Send', onclick='postCombination("/set-master-combination")')
+          
