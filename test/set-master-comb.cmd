@@ -1,0 +1,1 @@
+curl -v --cookie -H "Accept: application/json" -H "Content-type: application/json" -X POST -d ' {"combination":{"numbers": [1,23,25,36,45,89], "c": 49, "r": 9}}'  http://localhost:8080/set-master-comb
