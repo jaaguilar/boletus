@@ -1,0 +1,15 @@
+extends layout
+
+block page-content
+  #msgpanel
+    h3#msg
+  .form-group
+    div.row
+      div.col-md-9.col-md-offset-1
+        div.row    
+          div.col-md-2
+            label(for='term') Combinations
+            input#csvfile.txtFileUpload(type='file', name='File Upload', accept='.csv')
+        div.row    
+          div#contain-submit.col.md-3
+            input#sub-compare.btn.btn-default(type='submit', value='Send', onclick='postParsedCSVFile("#csvfile",";",false,"/compare-multi")')
